@@ -1,4 +1,4 @@
-# tsc-files
+# vue-tsc-files
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gustavopch/tsc-files/Release?style=flat-square)
 
@@ -7,11 +7,11 @@ A tiny tool to run `tsc` on specific files without ignoring `tsconfig.json`.
 ## Installation
 
 ```sh
-npm i -D tsc-files
+npm i -D vue-tsc-files
 ```
 
 ```sh
-yarn add -D tsc-files
+yarn add -D vue-tsc-files
 ```
 
 ## Why
@@ -29,7 +29,7 @@ With lint-staged:
 ```json
 {
   "lint-staged": {
-    "**/*.ts": "tsc-files --noEmit"
+    "*.{vue,ts}": "tsc-files --noEmit"
   }
 }
 ```
