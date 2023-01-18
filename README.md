@@ -4,6 +4,9 @@
 
 A tiny tool to run `tsc` on specific files without ignoring `tsconfig.json`.
 
+## About vue-tsc-files
+Fork from [gustavopch/tsc-files](https://github.com/gustavopch/tsc-files), and support the Typescript in Vue.
+
 ## Installation
 
 ```sh
@@ -29,7 +32,7 @@ With lint-staged:
 ```json
 {
   "lint-staged": {
-    "*.{vue,ts}": "tsc-files --noEmit"
+    "*.{vue,ts}": "vue-tsc-files --noEmit"
   }
 }
 ```
