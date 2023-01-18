@@ -6,7 +6,7 @@
   "author": "Gustavo P. Cardoso <https://twitter.com/gustavo_pch>",
   "repository": "github:gustavopch/tsc-files",
   "bin": {
-    "tsc-files": "lib/index.js"
+    "vue-tsc-files": "lib/index.js"
   },
   "files": [
     "lib"
