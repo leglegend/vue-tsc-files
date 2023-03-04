@@ -4,6 +4,10 @@
 
 A tiny tool to run `tsc` on specific files without ignoring `tsconfig.json`.
 
+
+English | [简体中文](./README.zh-CN.md)
+
+
 ## About vue-tsc-files
 Fork from [gustavopch/tsc-files](https://github.com/gustavopch/tsc-files), and support the Typescript in Vue.
 
@@ -34,6 +38,19 @@ With lint-staged:
   "lint-staged": {
     "*.{vue,ts}": "vue-tsc-files --noEmit"
   }
+}
+```
+
+Vue-tsc-files can auto search d.ts from root or src dir. If you have more, you can add there in `lint-staged.config.js`
+
+```js
+const declarationFiles = ['src/global.d.ts', 'src/shims-vue.d.ts']
+
+module.exports = {
+  '*.{vue,ts}': (filenames) => {
+    const files = [...filenames, ...declarationFiles]
+    return `vue-tsc-files ${files.join(' ')} --noEmit --skipLibCheck`
+  },
 }
 ```
 
